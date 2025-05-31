@@ -61,3 +61,10 @@ make
 ![alt text](images/run_res.png)
 ### 内存泄漏检测
 ![alt text](images/memcheck.png)
+
+
+性能优化 perf 生成火焰图检测
+
+- 1. 优化桶数量
+- 2. 优化pagecathe 使用基数树(类似虚拟页表) 查找span
+- 3. 封装
