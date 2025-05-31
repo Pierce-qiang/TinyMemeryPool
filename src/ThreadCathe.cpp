@@ -1,6 +1,8 @@
 
 #include "../include/ThreadCathe.h"
 #include "../include/CentralCathe.h"
+#include "Common.h"
+#include <cstddef>
 #include <cstdlib>
 
 namespace TinyMemoryPool {
@@ -112,6 +114,7 @@ namespace TinyMemoryPool {
 
         // 计算最大获取的批量数
         size_t maxNum = MAX_BATCH_SIZE / size;
+        maxNum = std::max(maxNum,static_cast<size_t>(1));
         return baseNum < maxNum ? baseNum : maxNum;
 
     }
